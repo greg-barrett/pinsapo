@@ -8,6 +8,7 @@
         <Contact class="panel"/>
       </div>
     </div>
+<InsaecularSaeculorum/>
 
   </div>
 </template>
@@ -17,7 +18,7 @@ import Landing from './components/Landing.vue'
 import Features from './components/Features.vue'
 import Contact from './components/Contact.vue'
 import About1 from './components/About1.vue'
-//import InsaecularSaeculorum from './components/InsaecularSaeculorum.vue'
+import InsaecularSaeculorum from './components/InsaecularSaeculorum.vue'
 import { TweenMax, TimelineMax } from 'gsap'
 import ScrollMagic from 'scrollmagic'
 import 'ScrollMagicGSAP'
@@ -29,6 +30,7 @@ export default {
     About1,
     Features,
     Contact,
+    InsaecularSaeculorum
 
   },
   mounted() {
