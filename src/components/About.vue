@@ -1,6 +1,7 @@
 <template>
   <div class="about page">
 
+
     <div class="container">
 
       <div class="first">

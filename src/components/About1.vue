@@ -1,5 +1,6 @@
 <template>
   <div class="page">
+    <a href="#about"></a>
     <template v-for="section in sections">
       <div v-on:click="resize" class="col" ref="section" v-bind:class="{focus:section.focus, equal:section.equal, minor:section.minor, aboutCol:section.about, thinkCol:section.think, designCol:section.design, buildCol:section.build}">
         <div v-bind:class="{about:section.about, think:section.think, design:section.design, build:section.build, background:section.focus}">

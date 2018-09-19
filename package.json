@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "gsap": "^2.0.2",
+    "hamburgers": "^0.9.3",
     "imports-loader": "^0.8.0",
     "scrollmagic": "^2.0.5",
     "vue": "^2.5.17",

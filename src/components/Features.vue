@@ -1,9 +1,12 @@
 <template>
   <div class="features page">
+    <a href="#features"></a>
     <template v-for="section in sections">
-      <div ref="section" v-on:mouseover="resizeHover" v-on:click="resizeClick"v-bind:class="{focus:section.focus, equal:section.equal, minor:section.minor, full:section.full, hidden:section.hidden}" class="thirds" id="left">
+
+      <div ref="section" v-on:mouseover="resizeHover" v-on:click="resizeClick"v-bind:class="{focus:section.focus, equal:section.equal, minor:section.minor, full:section.full, hidden:section.hidden, insac:section.insac, lpf:section.lpf, instagram:section.instagram}" class="thirds" id="left">
         <h2>{{section.title}}</h2>
       </div>
+
     </template>
   </div>
 </template>
@@ -14,9 +17,9 @@ export default {
     return {
       clicked:false,
       sections: [
-        { title:"Insaecular Saeculorum", ref:"col1", focus:false, equal:true, minor:false, full:false, hidden:false },
-        { title:"Le Petit Fairzou", ref:"col2", focus:false, equal:true, minor:false, full:false, hidden:false },
-        { title:"Instagram", ref:"col3", focus:false, equal:true, minor:false, full:false, hidden:false},
+        { title:"Insaecular Saeculorum", ref:"col1", focus:false, equal:true, minor:false, full:false, hidden:false, insac: true },
+        { title:"Le Petit Fairzou", ref:"col2", focus:false, equal:true, minor:false, full:false, hidden:false, lpf: true },
+        { title:"Instagram", ref:"col3", focus:false, equal:true, minor:false, full:false, hidden:false, instagram: true}
       ],//sections
       cols:2
     }//return
@@ -25,7 +28,7 @@ export default {
     resizeHover(e) {
       for (var i=0; i<= this.cols; i++) {
         if (this.$refs.section[i] === e.currentTarget) {
-          //if clicked add focus class and remove others
+          //if hovered add focus class and remove others
           this.sections[i].focus=true;
           this.sections[i].minor=false;
         } else {
@@ -55,8 +58,18 @@ export default {
         this.sections[i].equal=false
       }//for
       this.clicked=true;
-    }//resize
-  }//methods
+      setTimeout(this.navigate, 2000);
+    },//resize
+    addClass() {
+      for (var i=0; i<= this.cols; i++) {
+        console.log("hey")
+        this.$refs.section[i].classList.add(this.sections[i].class);
+      }//for
+    },
+    navigate () {
+      this.$router.push('instagram');
+    }//addClass
+  },//methods
 }
 </script>
 
@@ -86,12 +99,20 @@ export default {
 }
 
 .thirds {
-  background-image: linear-gradient(to right, #111, #222);
   float: left;
   height: 100%;
   color: white;
   position: relative;
   transition: width 2s ease;
+}
+.instagram {
+  background-image: linear-gradient(-135deg,#1400c8,#b900b4,#f50000);
+}
+.lpf {
+  background-image: linear-gradient(to right, #111, #222);
+}
+.insac {
+  background-image: linear-gradient(to right, #111, #222);
 }
 
 h2 {
