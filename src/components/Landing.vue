@@ -1,6 +1,7 @@
 <template>
   <div class="landing page">
-    <div class="logo">
+    <button v-on:click="next">next</button>
+    <div class="logo" v-bind:class="{hidden:clicked}">
         <h1 v-on:click="spray=!spray">
           <span v-bind:class="{sprayup:spray}"><</span>
           <span v-bind:class="{spraydown:spray}">P</span>
@@ -19,7 +20,17 @@
 export default {
   data() {
     return {
-      spray: false
+      spray: false,
+      clicked:false
+    }
+  },
+  methods: {
+    next () {
+      this.clicked=!this.clicked
+      setTimeout(this.navigate, 2000);
+    },//next
+    navigate() {
+      this.$router.push('about');
     }
   }
 }
@@ -30,6 +41,8 @@ export default {
 
 .landing {
   background-image: linear-gradient(to right, #49ad7b, #1b7b34);
+  height: 100%;
+
 }
 
 .logo {
@@ -43,8 +56,12 @@ export default {
   font-family: 'Montserrat', sans-serif;
   font-size: 200px;
   color: #fff;
+  transition: all 2s;
 }
-
+.hidden {
+  opacity: 0;
+  
+}
 //key frame classes with different delays
 .sprayup {
   position: relative;

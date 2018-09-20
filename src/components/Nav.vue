@@ -6,9 +6,10 @@
     </span>
   </button>
   <div class="bar" v-bind:class="{showBar: clicked}">
-    <button v-on:click="clicked=!clicked" name="about">&lt;About&gt;</button>
-    <button v-on:click="clicked=!clicked" name="features">&lt;Features&gt;</button>
-    <button v-on:click="clicked=!clicked" name="contact">&lt;Contact&gt;</button>
+    <router-link to="/about"><button v-on:click="clicked=!clicked">&lt;About&gt;</button></router-link>
+    <router-link to="/features"><button v-on:click="clicked=!clicked">&lt;Features&gt;</button></router-link>
+    <router-link to="/contact"><button v-on:click="clicked=!clicked">&lt;Contact&gt;</button></router-link>
+
 
   </div>
   </div>

@@ -95,6 +95,9 @@ export default {
 }
 .features {
   font-family: 'Montserrat', sans-serif;
+  height: 100%;
+  width: 100%;
+  position: fixed;
 
 }
 

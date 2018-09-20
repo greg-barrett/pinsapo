@@ -66,7 +66,10 @@ export default {
 
 
 <style scoped lang="scss">
-
+.about {
+  height: 100%;
+  width: 100%;
+}
 .container{
   height: 100%;
   font-family: 'Montserrat', sans-serif;
