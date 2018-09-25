@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Nav/>
-    <transition name="fade">
+    <transition name="router-animation" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
       <router-view></router-view>
     </transition>
   </div>
@@ -9,16 +9,13 @@
 
 <script>
 import Nav from './components/Nav.vue'
-
-import { TweenMax, TimelineMax } from 'gsap'
-import ScrollMagic from 'scrollmagic'
-import 'ScrollMagicGSAP'
-
 export default {
   name: 'app',
   components:{
   Nav,
-  }
+},//components
+
+
 }
 </script>
 
@@ -26,23 +23,12 @@ export default {
 #app {
   width: 100%;
   height: 100%;
-
+  font-size: 12px;
 }
 html, body {
   height: 100%;
+
 }
-.fade-enter-active {
-  animation: fade 3s 3s;
-}
-.fade-leave-active {
-  animation: fade 3s reverse;
-}
-@keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+
+
 </style>

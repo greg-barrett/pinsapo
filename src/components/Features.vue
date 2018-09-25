@@ -1,18 +1,18 @@
 <template>
   <div class="features page">
-    <a href="#features"></a>
     <template v-for="section in sections">
-
       <div ref="section" v-on:mouseover="resizeHover" v-on:click="resizeClick"v-bind:class="{focus:section.focus, equal:section.equal, minor:section.minor, full:section.full, hidden:section.hidden, insac:section.insac, lpf:section.lpf, instagram:section.instagram}" class="thirds" id="left">
         <h2>{{section.title}}</h2>
       </div>
-
     </template>
   </div>
 </template>
 
 <script>
+import {bus} from "../main"
+
 export default {
+
   data() {
     return {
       clicked:false,
@@ -70,6 +70,9 @@ export default {
       this.$router.push('instagram');
     }//addClass
   },//methods
+  created() {
+    bus.$emit('pageChange', 2)
+  }
 }
 </script>
 
@@ -94,10 +97,11 @@ export default {
   overflow: hidden;
 }
 .features {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   height: 100%;
   width: 100%;
   position: fixed;
+  background-color: black;
 
 }
 
@@ -122,7 +126,50 @@ h2 {
   position: absolute;
   bottom: 5px;
   left: 5px;
-  font-size: 30px;
-
+  font-size: 4em;
 }
+
+
+
+
+
+@media only screen and (max-width: 1224px) {
+  h2 {
+    font-size: 3em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .thirds {
+    float: none;
+    height: 33%;
+    color: white;
+    width: 100%;
+    transition: height 2s ease;
+  }
+  .equal {
+    height: 33.33%;
+  }
+  .minor {
+    height: 30%;
+  }
+  .focus {
+    height: 40%;
+  }
+  .full {
+    height: 100%;
+  }
+  .hidden {
+    height: 0%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  h2 {
+    font-size: 2em;
+  }
+}
+
 </style>

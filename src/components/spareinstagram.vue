@@ -182,7 +182,6 @@ export default {
   },
   created() {
     bus.$emit('pageChange', 4)
-
   }
 
 }
@@ -195,41 +194,30 @@ html, body {
 }
 .page {
   height: 100%;
-  h1 {
-    text-align: center;
-    font-size: 4em;
-    padding: 40px 0 30px 0
-  }
 }
 .segment {
   width: 100%;
   height: 100%;
   font-family: 'Open Sans', sans-serif;
-  margin-bottom: 200px;
+  margin-bottom: 400px;
   background-color: white;
-
 }
 
 
 .cover {
   background-image: linear-gradient(-135deg,#1400c8,#b900b4,#f50000);
-  //padding-top: 15%;
-}
-.about, .breif, .palettes {
-  p {
-    font-size: 2em;
-    line-height: 3em;
+  padding-top: 15%;
+  h1 {
+    font-family: 'Satisfy', cursive;
+    color: white;
+    font-size: 14em;
+    text-align: center;
+    opacity: 0;
+
   }
 }
 #title {
-  font-family: 'Satisfy', cursive;
-  color: white;
-  font-size: 14em;
-  text-align: center;
-  opacity: 0;
   animation: fade-in 2s 1s forwards;
-  position: relative;
-  top: 30%;
 }
 @keyframes fade-in {
   0% {
@@ -246,9 +234,12 @@ html, body {
   float: left;
   background-color: #eee;
   p {
+    font-size: 30px;
+    line-height: 5em;
     width: 70%;
     margin: auto;
-    padding-top: 20%;
+    padding-top: 10%;
+
   }
 
 }
@@ -267,48 +258,57 @@ html, body {
   background-size: 50%;
 }
 
-
 .breif-text {
-  float: left;
   background-image: linear-gradient(-135deg,#1400c8,#b900b4,#f50000);
   color: white;
-  width: 50%;
-  height: 100%;
+  width: 100%;
+  height: 50%;
+
+  h1 {
+    text-align: center;
+    font-size: 5em;
+    padding: 40px 0 30px 0
+  }
   p {
     width: 70%;
     margin: auto;
+    font-size: 2.2em;
+    line-height: 2.8em;
+    text-align: justify;
+
   }
 }
 
-.deliverables, .link{
-  float: left;
-  height: 50%;
+.deliverables, .link {
   width: 50%;
-  text-align: center;
+  height: 50%;
+  float: left;
 }
 .deliverables {
   background-color: #f7f7f7;
   h2 {
-    font-size: 4em;
-    padding: 40px 0 30px 0
+    font-size: 3em;
+    padding: 10% 0 2% 0%;
+    text-align: center;
+
   }
   li {
+    text-align: center;
     font-size: 1.8em;
     line-height: 1.8em;
-    text-align: center;
+
 
   }
 }
 .link {
-  float: left;
-  height: 50%;
-  width: 50%;
   background-color: #eee;
+  position: relative;
   a {
     font-size: 3em;
     display: block;
-    position: relative;
-    top: 50%;
+    position: absolute;
+    top: 40%;
+    left: 40%;
 
   }
 }
@@ -321,12 +321,13 @@ html, body {
   width: 100%;
   height: 40%;
   h1 {
+    font-size: 5em;
+    padding: 30px 0 30px 0;
     text-align: center;
-    font-size: 4em;
-    padding: 40px 0 30px 0
   }
   p {
-    line-height: 1.5em;
+    font-size: 2.1em;
+    line-height: 2.1em;
     width: 70%;
     margin: auto;
     text-align: center;
@@ -336,25 +337,29 @@ html, body {
 .colors {
   width: 100%;
   height: 60%;
+  position: relative;
 }
 
 .color-taster {
   width: 70%;
+
   margin: auto;
   height: 80%;
+
+
 }
 .color-info {
   width: 100%;
   position: absolute;
   top: 50%;
-  font-size: .8em;
-
+  font-size: 1.6em;
+  vertical-align: bottom;
   text-align: center;
 }
 .color {
   display: inline-block;
   width: 20%;
-  height: 100%;
+  min-height: 100%;
   position: relative;
 
 }
@@ -376,40 +381,41 @@ html, body {
   background: linear-gradient(-135deg,#1400c8,#b900b4,#f50000);
   color: white;
   .color-info{
-    top: 40%;
-    p {
-      line-height: 2em;
-    }
+  top: 40%;
+  line-height: 25px;
   }
 }
 .fonts {
   background-color: white;
   h1 {
-    font-size: 6em;
+    font-size: 7em;
     text-align: center;
-    padding: 40px 0 30px 0
+    padding: 18% 0 0 0;
   }
   h3 {
     font-family: 'Open Sans', sans-serif;
     text-align:  center;
-    font-size: 2em;
+    font-size: 3em;
     font-weight: bold;
     padding-top: 10%;
   }
 }
 .a-font {
-  padding-top: 2%;
   width: 100%;
   height: 50%;
   font-family: 'Satisfy', cursive;
   border-bottom: 8px solid black;
+  p {
+    padding: 2% 0 0 0;
+  }
 }
 .b-font {
-  padding-top: 2%;
   width: 100%;
   height: 50%;
   font-family: 'Roboto', sans-serif;
-
+  p {
+    padding: 5% 0 0 0;
+  }
 }
 .font-name {
   width: 33.33%;
@@ -423,19 +429,16 @@ html, body {
   width: 66.66%;
   height: 100%;
   float: left;
-  font-size: 3em;
-  line-height: 3em;
-  p {
-    width: 90%;
-    line-height: 3em;
-  }
+  padding-top: 4%;
+  font-size: 4em;
+  line-height: 2em;
 
 }
 
 
 .preview {
   background-color: #eee;
-  padding-top: 2%;
+  padding-top: 5%;
 }
 
 .preview-main {
@@ -462,15 +465,13 @@ html, body {
 .title {
   width: 50%;
   height: 100%;
-
+  background-color: #f7f7f7;
   float: left;
   h1 {
-    font-size: 4em;
-    position: relative;
-    top: 40%;
+    font-size: 10em;
     font-weight: bold;
     text-align: center;
-
+    line-height: 300%;
   }
 }
 .main-tool {
@@ -553,188 +554,5 @@ html, body {
   display: inline-block;
 
 }
-@media only screen and (min-width: 1366px) {
 
-}
-@media only screen and (max-width: 1365px) {
-
-}
-@media only screen and (max-width: 768px) {
-  .breif-text {
-    width: 100%;
-    height: 60%;
-    float: none;
-  }
-  .deliverables, .link {
-    width: 100%;
-    float: none;
-    height: 30%;
-  }
-  .link {
-    height: 10%;
-     a{
-      top: 20px;;
-    }
-  }
-  .palette-text{
-    p {
-      width: 90%;
-    }
-  }
-  .color-taster {
-    width: 90%;
-  }
-  .fonts {
-    text-align: center;
-  }
-  .font-name {
-    width: 100%;
-    height: auto;
-    float: none;
-    h3 {
-      padding-top: 10px;
-    }
-  }
-  .font-sample {
-    width: 100%;
-    float: none;
-    text-align: center;
-    p {
-      line-height: 2em;
-      padding-top: 40px;
-      width: 100%;
-    }
-  }
-
-  .title {
-    width: 100%;
-    height: auto;
-  }
-  .top-section {
-    height: 30%;
-  }
-  .main-tool {
-    width: 100%;
-    height: 50%;
-    background-size: contain;
-  }
-  .sub-tools {
-    width: 100%;
-    height: 30%;
-  }
-  .s-t-1, .s-t-2, .s-t-3 {
-    background-size: contain;
-  }
-  .add-ons {
-    width: 100%;
-  }
-  .add-on {
-    height: 20%;
-  }
-
-
-}
-@media only screen and (max-width: 480px) {
-  #title {
-    font-size: 6em;
-  }
-  .about, .breif, .palettes, .fonts {
-    p {
-      line-height: 1.6em;
-      font-size: 1.7em;
-    }
-    h1 {
-      font-size: 2.5em;
-      padding: 20px 0;
-    }
-
-    h2 {
-      font-size: 2em;
-      padding: 3% 0;
-    }
-    li {
-      line-height: 1.2em;
-      font-size: 1.5em;
-
-    }
-  }
-  .col-two-third {
-    width: 100%;
-    height: 80%;
-    float: none;
-    p {
-      width: 90%;
-
-    }
-  }
-  .col-one-third {
-    width: 100%;
-    height: 18%;
-    float: none;
-    margin-top: 2%;
-  }
-  .logo-area {
-    width: 100%;
-    background-size: contain;
-  }
-  .breif {
-    p {
-      font-size: 1.5em;
-      width: 90%;
-    }
-
-  }
-  .link {
-    a {
-      font-size: 2.1em
-    }
-  }
-  .palettes {
-    h1 {
-      padding: 20px 0;
-    }
-    p {
-      text-align: left;
-      font-size: 1.5em;
-    line-height: 1.5em;
-    }
-  }
-  .color {
-    width: 100%;
-    height: 20%;
-    p {
-      text-align: center;
-    }
-  }
-  .color-info {
-    p {
-      display: inline-block;
-      margin-right: 10px;
-    }
-  }
-  .fonts {
-    h1 {
-      padding: 20px 0;
-    }
-    h3 {
-      font-size: 1.5em;
-      padding: 0 0 10px 0;
-    }
-  }
-  .font-sample {
-    font-size: 2em;
-    p {
-      padding-top: 0;
-      width: 90%;
-      margin: auto;
-      font-size: .9em;
-    }
-  }
-  .main-tool {
-    margin-bottom: 20px;
-  }
-
-
-
-}
 </style>

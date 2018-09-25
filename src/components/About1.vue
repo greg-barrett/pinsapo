@@ -1,10 +1,12 @@
 <template>
-  <div class="about page">
+  <div class="about-page page">
+
     <template v-for="section in sections">
       <div v-on:click="resize" class="col" ref="section" v-bind:class="{focus:section.focus, equal:section.equal, minor:section.minor, aboutCol:section.about, thinkCol:section.think, designCol:section.design, buildCol:section.build}">
         <div v-bind:class="{about:section.about, think:section.think, design:section.design, build:section.build, background:section.focus}">
-          <transition name="title"><h1 v-show="section.focus">{{section.title}}</h1></transition>
           <transition name="appear"><p v-show="section.focus">{{section.paragraph}}</p></transition>
+          <transition name="title"><h1 v-show="section.focus">{{section.title}}</h1></transition>
+
         </div>
       </div>
     </template>
@@ -13,7 +15,10 @@
 </template>
 
 <script>
+import {bus} from "../main"
+
 export default {
+
   data() {
     return {
       startWidth: "25%",
@@ -45,47 +50,39 @@ export default {
         this.sections[i].equal=false;
       }//for
     }//resize
-  }//methods
+  },//methods
+  created() {
+    bus.$emit('pageChange', 1)
+  }
 
 }
 </script>
 
 
 <style scoped lang="scss">
-.about {
+.about-page {
   height: 100%;
-
-
+  position: fixed;
+  width: inherit;
 }
 .page {
-  font-family: 'Montserrat', sans-serif;
-  overflow: hidden;
-
+  font-family: 'Open Sans', sans-serif;
 }
+
 .col {
   float: left;
   height: 100%;
   border-right: 4px solid white;
   transition: width 2s;
+
 }
 
-.focus {
-  width:85%;
-}
-.equal {
-  width: 25%;
-}
-.minor {
-  width: 5%;
-}
 .about {
   background-image: url(../assets/about.png);
   background-position: top;
   background-size: contain;
   background-repeat: no-repeat;
   height: 100%;
-
-
 }
 .think {
   background-image: url(../assets/think.png);
@@ -108,6 +105,22 @@ export default {
   background-repeat: no-repeat;
   height: 100%;
 }
+.focus {
+  width:85%;
+
+}
+.equal {
+  width: 25%;
+}
+.minor {
+  width: 5%;
+}
+.background {
+  background: none;
+  position: relative;
+  overflow: hidden;
+}
+
 .aboutCol {
   background-color: #197F31;
 }
@@ -126,12 +139,12 @@ export default {
   overflow: hidden;
 }
 h1 {
-  position: absolute;
-  width: 100%;
-  bottom: 35px;
-  left: 30px;
-  font-size: 160px;
+  float: right;
+  vertical-align: baseline;
+  margin: 10px 10px 0 0;
+  font-size: 10em;
   color: white;
+
   text-shadow: -1px -1px gray,
                 -2px -2px gray,
                 -3px -3px gray,
@@ -145,10 +158,10 @@ h1 {
 
 }
 p {
-  width: 70%;
+  width: 80%;
   margin: auto;
-  font-size: 30px;
-  line-height: 50px;
+  font-size: 2.5em;
+  line-height: 1.4em;
   margin-top: 10%;
   color: white;
 }
@@ -181,17 +194,7 @@ p {
 
 .title-leave-to {
   text-shadow: 0px 0px gray;
-
 }
-
-
-
-
-
-
-
-
-
 
 //keyframes from animista
 //title
@@ -404,243 +407,147 @@ p {
             animation-timing-function: ease-out;
   }
 }
-//focus:section.focus, equal:section.equal, minor:section.minor, background:!section.focus}" v-bind:class"classer(section)
+
+
+@media only screen and (min-width: 1501px) {
+  h1 {
+    font-size: 14em;
+    position: absolute;
+    bottom: 40px;
+    right: 25px;
+  }
+  p {
+    margin-top: 15%;
+    font-size: 3.2em;
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  h1 {
+    font-size: 10em;
+    position: absolute;
+    bottom: 40px;
+    right: 25px;
+  }
+  p {
+    font-size: 3em;
+    width: 80%;
+  }
+
+}
+@media only screen and (max-width: 1224px) {
+  h1 {
+    font-size: 8em;
+    position: relative;
+    bottom: -60px;
+
+  }
+  p {
+    font-size: 2.5em;
+    width: 80%;
+  }
+  .background {
+    overflow: scroll;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .col {
+    width: 100%;
+    height: 25%;
+    border-bottom: 4px solid white;
+    transition: height 2s;
+  }
+  .focus {
+    height:85%;
+  }
+  .equal {
+    height: 25%;
+  }
+  .minor {
+    height: 5%;
+  }
+  .about {
+    background-image: url(../assets/about.png);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+  }
+  .think {
+    background-image: url(../assets/think.png);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+  }
+  .design {
+    background-image: url(../assets/design.png);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+  }
+  .build {
+    background-image: url(../assets/build.png);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+  }
+  .background {
+    background: none;
+    position: relative;
+    overflow: hidden;
+  }
+
+  p {
+    font-size: 2em;
+    width: 90%;
+  }
+  h1 {
+    font-size: 6em;
+    position: relative;
+    bottom: -50px;
+    right: 25px;
+
+  }
+  .background {
+    overflow: scroll;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  p {
+    font-size: 1.8em;
+    width: 90%;
+  }
+  h1 {
+    font-size: 5em;
+    position: relative;
+    bottom: -40px;
+  }
+  .background {
+    overflow: scroll;
+  }
+}
+@media only screen and (max-width: 320px) {
+  p {
+    font-size: 1.7em;
+    width: 90%;
+  }
+  h1 {
+    //font-size: 5em;
+    //margin-top: 10px;
+    //margin-right: 10px;
+    //float: right;
+
+  }
+  .background {
+    overflow: scroll;
+  }
+}
+
+
 </style>
-.bounce-in-top {
-	-webkit-animation: bounce-in-top 1.1s 2s both;
-	        animation: bounce-in-top 1.1s 2s both;
-}
-
-.bounce-in-right {
-	-webkit-animation: bounce-in-right 1.1s 2s both;
-	        animation: bounce-in-right 1.1s 2s both;
-}
-
-/* ----------------------------------------------
- * Generated by Animista on 2018-9-6 12:14:3
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation bounce-in-top
- * ----------------------------------------
- */
-@-webkit-keyframes bounce-in-top {
-  0% {
-    -webkit-transform: translateY(-500px);
-            transform: translateY(-500px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    opacity: 0;
-  }
-  38% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  55% {
-    -webkit-transform: translateY(-65px);
-            transform: translateY(-65px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  72% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  81% {
-    -webkit-transform: translateY(-28px);
-            transform: translateY(-28px);
-    -webkit-animation-timing-function: ease-in;
-  }
-  90% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  95% {
-    -webkit-transform: translateY(-8px);
-            transform: translateY(-8px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-}
-@keyframes bounce-in-top {
-  0% {
-    -webkit-transform: translateY(-500px);
-            transform: translateY(-500px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    opacity: 0;
-  }
-  38% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  55% {
-    -webkit-transform: translateY(-65px);
-            transform: translateY(-65px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  72% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  81% {
-    -webkit-transform: translateY(-28px);
-            transform: translateY(-28px);
-    -webkit-animation-timing-function: ease-in;
-  }
-  90% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  95% {
-    -webkit-transform: translateY(-8px);
-            transform: translateY(-8px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-}
-
-
-/* ----------------------------------------------
- * Generated by Animista on 2018-9-6 12:10:51
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation bounce-in-right
- * ----------------------------------------
- */
-@-webkit-keyframes bounce-in-right {
-  0% {
-    -webkit-transform: translateX(600px);
-            transform: translateX(600px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    opacity: 0;
-  }
-  38% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  55% {
-    -webkit-transform: translateX(68px);
-            transform: translateX(68px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  72% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  81% {
-    -webkit-transform: translateX(32px);
-            transform: translateX(32px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  90% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  95% {
-    -webkit-transform: translateX(8px);
-            transform: translateX(8px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-}
-@keyframes bounce-in-right {
-  0% {
-    -webkit-transform: translateX(600px);
-            transform: translateX(600px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    opacity: 0;
-  }
-  38% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  55% {
-    -webkit-transform: translateX(68px);
-            transform: translateX(68px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  72% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  81% {
-    -webkit-transform: translateX(32px);
-            transform: translateX(32px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  90% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  95% {
-    -webkit-transform: translateX(8px);
-            transform: translateX(8px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-}
