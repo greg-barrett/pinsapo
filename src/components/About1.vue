@@ -176,7 +176,7 @@ p {
 
   }
   p {
-    font-size: 1.7em;
+    font-size: 1.5em;
     width: 80%;
   }
 }
@@ -185,7 +185,7 @@ p {
     font-size: 5em;
   }
   p {
-    font-size: 2.7em;
+    font-size: 2.4em;
     width: 80%;
   }
 }

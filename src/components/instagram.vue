@@ -587,7 +587,7 @@ html, body {
     p {
       font-size: 1.3em;
       line-height: 1.6em;
-      width: 80%;
+      //width: 80%;
     }
   }
 
@@ -684,7 +684,7 @@ html, body {
 @media only screen and (max-width: 768px) and (orientation:portrait) {
   .breif-text {
     width: 100%;
-    height: 60%;
+    height: 50%;
     float: none;
   }
   .deliverables, .link {
@@ -693,12 +693,13 @@ html, body {
     height: 30%;
   }
   .link {
-    height: 10%;
+    height: 20%;
      a{
       top: 20px;;
     }
   }
   .palette-text{
+    height: auto;
     p {
       width: 90%;
     }
@@ -722,6 +723,7 @@ html, body {
     float: none;
     text-align: center;
     p {
+
       line-height: 2em;
       padding-top: 40px;
       width: 100%;
@@ -772,9 +774,10 @@ html, body {
     }
 
     h2 {
-      font-size: 2em;
+      font-size: 1.8em;
       padding: 3% 0;
     }
+
     li {
       line-height: 1.2em;
       font-size: 1.5em;
@@ -802,7 +805,7 @@ html, body {
   }
   .breif {
     p {
-      font-size: 1.5em;
+      font-size: 1.2em;
       width: 90%;
     }
 
@@ -818,7 +821,7 @@ html, body {
     }
     p {
       text-align: left;
-      font-size: 1.5em;
+      font-size: 1.1em;
     line-height: 1.5em;
     }
   }
@@ -867,10 +870,10 @@ html, body {
   }
   .font-sample {
     p {
-      padding-top: 0;
+      padding-top: 5px;
       width: 90%;
       margin: auto;
-      font-size: .8em;
+      font-size: .6em;
     }
   }
   .main-tool {
