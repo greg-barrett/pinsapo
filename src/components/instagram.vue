@@ -197,7 +197,7 @@ html, body {
   height: 100%;
   h1 {
     text-align: center;
-    font-size: 4em;
+    font-size: 3.5em;
     padding: 40px 0 30px 0
   }
 }
@@ -218,18 +218,18 @@ html, body {
 .about, .breif, .palettes {
   p {
     font-size: 2em;
-    line-height: 3em;
+    line-height: 2.4em;
   }
 }
 #title {
   font-family: 'Satisfy', cursive;
   color: white;
-  font-size: 14em;
+  font-size: 12em;
   text-align: center;
   opacity: 0;
   animation: fade-in 2s 1s forwards;
   position: relative;
-  top: 30%;
+  top: 25%;
 }
 @keyframes fade-in {
   0% {
@@ -246,7 +246,7 @@ html, body {
   float: left;
   background-color: #eee;
   p {
-    width: 70%;
+    width: 80%;
     margin: auto;
     padding-top: 20%;
   }
@@ -275,7 +275,7 @@ html, body {
   width: 50%;
   height: 100%;
   p {
-    width: 70%;
+    width: 80%;
     margin: auto;
   }
 }
@@ -289,11 +289,11 @@ html, body {
 .deliverables {
   background-color: #f7f7f7;
   h2 {
-    font-size: 4em;
-    padding: 40px 0 30px 0
+    font-size: 3em;
+    padding: 40px 0 20px 0
   }
   li {
-    font-size: 1.8em;
+    font-size: 1.5em;
     line-height: 1.8em;
     text-align: center;
 
@@ -322,14 +322,15 @@ html, body {
   height: 40%;
   h1 {
     text-align: center;
-    font-size: 4em;
-    padding: 40px 0 30px 0
+    font-size: 3em;
+    padding: 40px 0 20px 0
   }
   p {
     line-height: 1.5em;
     width: 70%;
     margin: auto;
     text-align: center;
+    font-size: 1.5em;
   }
 
 }
@@ -424,10 +425,9 @@ html, body {
   height: 100%;
   float: left;
   font-size: 3em;
-  line-height: 3em;
   p {
     width: 90%;
-    line-height: 3em;
+    line-height: 2em;
   }
 
 }
@@ -559,7 +559,129 @@ html, body {
 @media only screen and (max-width: 1365px) {
 
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 823px) {
+  #title {
+    font-size: 10em;
+    top: 10%;
+  }
+  .col-two-third {
+    p{
+      padding-top: 15%;
+      width: 90%;
+      line-height: 1.5em;
+    }
+  }
+  .page {
+    h1 {
+      font-size: 2em;
+      padding: 15px 0;
+    }
+    h2{
+      font-size: 1.5em;
+      padding: 10px 0;
+    }
+    li {
+      font-size: 1.3em;
+      line-height: 1.6em;
+    }
+    p {
+      font-size: 1.3em;
+      line-height: 1.6em;
+      width: 80%;
+    }
+  }
+
+  .breif-text {
+    width: 100%;
+    height: 50%;
+    float: none;
+
+  }
+
+  .deliverables, .link {
+    width: 50%;
+
+    height: 60%;
+  }
+  .link {
+
+     a{
+      top: 30%;
+    }
+  }
+  .palette-text{
+    p {
+      width: 90%;
+    }
+  }
+  .color-taster {
+    width: 90%;
+  }
+  .fonts {
+    text-align: center;
+  }
+  .a-font, .b-font {
+    padding-top: 30px;
+    width:50%;
+    height: 100%;
+    float: left;
+    border-bottom: none;
+  }
+  .a-font {
+    border-right: 2px solid black;
+  }
+  .font-name {
+    width: 100%;
+    height: auto;
+    float: none;
+    h3 {
+      font-size: 1em;
+      padding-top: 10px;
+    }
+  }
+  .font-sample {
+    width: 100%;
+    float: none;
+    text-align: center;
+    p {
+      line-height: 1.5em;
+      font-size: .7em;
+      padding-top: 20px;
+      width: 90%;
+      margin: auto;
+    }
+  }
+
+  .title {
+    width: 100%;
+    height: auto;
+  }
+  .top-section {
+    height: 30%;
+  }
+  .main-tool {
+    width: 100%;
+    height: 50%;
+    background-size: contain;
+  }
+  .sub-tools {
+    width: 100%;
+    height: 30%;
+  }
+  .s-t-1, .s-t-2, .s-t-3 {
+    background-size: contain;
+  }
+  .add-ons {
+    width: 100%;
+  }
+  .add-on {
+    height: 20%;
+    background-size: contain;
+  }
+
+
+}
+@media only screen and (max-width: 768px) and (orientation:portrait) {
   .breif-text {
     width: 100%;
     height: 60%;
@@ -634,14 +756,15 @@ html, body {
 
 
 }
+
 @media only screen and (max-width: 480px) {
   #title {
-    font-size: 6em;
+    font-size: 5.5em;
   }
   .about, .breif, .palettes, .fonts {
     p {
-      line-height: 1.6em;
-      font-size: 1.7em;
+      line-height: 1.3em;
+      font-size: 1.5em;
     }
     h1 {
       font-size: 2.5em;
@@ -714,20 +837,40 @@ html, body {
   }
   .fonts {
     h1 {
-      padding: 20px 0;
+      padding: 10px 0;
     }
     h3 {
       font-size: 1.5em;
       padding: 0 0 10px 0;
     }
   }
+  .fonts {
+    background-color: white;
+  }
+  .a-font {
+    border-bottom: 8px solid black;
+  }
+  .b-font, .a-font {
+    padding-top: 2%;
+    width: 100%;
+    height: 50%;
+  }
+  .font-name {
+    width: 100;
+    height: 30%;
+    display: inline-block;
+    float: left;
+  }
+
   .font-sample {
-    font-size: 2em;
+    width: 100%;
+  }
+  .font-sample {
     p {
       padding-top: 0;
       width: 90%;
       margin: auto;
-      font-size: .9em;
+      font-size: .8em;
     }
   }
   .main-tool {

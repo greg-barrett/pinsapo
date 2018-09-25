@@ -234,7 +234,7 @@ h3 {
     display: inline-block;
     float: none;
     font-family: 'Open Sans', sans-serif;
-    padding-top: 3%;
+    padding-top: 55px;
     width: 100%;
     text-align: center;
 

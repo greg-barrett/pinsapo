@@ -126,20 +126,14 @@ h2 {
   position: absolute;
   bottom: 5px;
   left: 5px;
-  font-size: 4em;
+  font-size: 2.5em;
 }
 
 
 
 
 
-@media only screen and (max-width: 1224px) {
-  h2 {
-    font-size: 3em;
-  }
-}
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
   .thirds {
     float: none;
     height: 33%;
@@ -164,8 +158,15 @@ h2 {
     white-space: nowrap;
     overflow: hidden;
   }
+  h2 {
+    font-size: 1.5em;
+  }
 }
-
+@media only screen and (max-width: 1024px) {
+  h2 {
+    font-size: 1.5em;
+  }
+}
 @media only screen and (max-width: 480px) {
   h2 {
     font-size: 2em;
