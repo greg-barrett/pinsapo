@@ -110,17 +110,14 @@
     </section>
 
     <section class="segment tool-kit">
-      <div class="top-section">
-        <div class="title">
+      <div class="tool-area title">
           <h1>Tools</h1>
-        </div>
-        <div class="main-tool">
-
-        </div>
+      </div>
+      <div class="tool-area main-tool">
 
       </div>
-      <div class="bottom-section">
-        <div class="sub-tools">
+
+        <div class="sub-tools tool-area">
           <div class="sub-tool s-t-1">
 
           </div>
@@ -132,7 +129,7 @@
           </div>
 
         </div>
-        <div class="add-ons">
+        <div class="add-ons tool-area">
           <div class="add-on a-o-1">
 
           </div>
@@ -144,9 +141,6 @@
           </div>
 
         </div>
-
-      </div>
-
 
     </section>
   </div>
@@ -413,54 +407,34 @@ a {
 
 //toolkit
 .tool-kit {
-
-}
-.top-section {
-  width: 100%;
-  height: 40vh;
-
+  width: 100vw;
 }
 .title {
-  width: 50%;
-  float:left;
-  height: 100%;
-
-  h1 {
-    text-align: center;
-    font-size: 10em;
-    padding-top: 15%;
-  }
+  padding: 25vh 0;
+  text-align: center;
+  font-size: 3em;
+}
+.tool-area {
+  height: 50vh;
+  width: 50vw;
+  float: left;
 }
 .main-tool {
-  float:left;
-  width: 50%;
-  height: 100%;
   background-image: url("../assets/rails.png");
   background-position: center;
-  background-size: 60%;
   background-repeat: no-repeat;
+  background-size: 60%;
 
-}
-.bottom-section {
-  width: 100%;
-  height: 60vh;
-}
-.sub-tools, .add-ons {
-  width: 50%;
-  height: 100%;
-  display: inline-block;
 }
 
 .sub-tool {
-  width: 33.33%;
-  display: inline-block;
-
+  width: 33%;
   height: 100%;
+  display: inline-block;
 }
 .add-on {
   width: 100%;
-  height: 33.33%;
-
+  height: 33%;
 }
 .s-t-1 {
   background-image: url("../assets/html.png");
@@ -516,7 +490,7 @@ a {
     width: 100%;
     float: left;
     min-height: 50vh;
-    padding: 20vh 10% 0 10%;
+    padding: 16vh 10% 0 10%;
   }
   .col-one-third {
     width: 100%;
@@ -571,14 +545,6 @@ a {
   }
   //tools
 
-  .bottom-section {
-    width: 100%;
-    height: 30vh;
-  }
-
-  .sub-tools, .add-ons {
-    width: 100%;
-  }
 
 }
 @media only screen and (max-width: 823px) {
@@ -589,7 +555,7 @@ a {
     width: 100%;
     float: left;
     min-height: 50vh;
-    padding: 15vh 5% 0 5%;
+    padding: 15vh 5%;
   }
   .col-one-third {
     width: 100%;
@@ -597,11 +563,11 @@ a {
     min-height: 50vh;
   }
   .logo {
-    background-size: 15%;
+    background-size: 25%;
   }
   //breif
   .breif-left {
-    padding: 20vh 10%;
+    padding: 15vh 10%;
     background-color: #f7f7f7;
   }
   .deliverables {
@@ -613,24 +579,24 @@ a {
     height: 60vh;
     margin-bottom: 5vh;
   }
-  //tools
-
-  .bottom-section {
-    width: 100%;
-  }
-
-  .sub-tools, .add-ons {
-    width: 100%;
-  }
   .palette-text {
     padding: 5vh 0;;
   }
+  //tools
 
+  .tool-area {
+    height: 30vh;
+    width: 100vw;
+    float: left;
+  }
+  .title {
+    font-size: 1.5em;
+    padding: 10vh 0;
+  }
 }
 
 @media only screen and (max-width: 700px) {
   .palette-text {
-    text-align: left;
     width: 90%;
     margin: auto;
   }
@@ -660,36 +626,36 @@ a {
 @media only screen and (max-width: 480px) {
 
     p {
-      font-size: 1.8em;
+      font-size: 1.5em;
       line-height: 1.4em;
     }
     h1 {
-      font-size: 3em;
+      font-size: 2.5em;
       padding-bottom: 3%;
     }
     h2 {
-      font-size: 2em;
+      font-size: 1.7em;
       padding-bottom: 2%;
     }
     h3 {
-      font-size: 2em;
+      font-size: 1.5em;
     }
     ul {
 
     }
     li {
-      font-size: 1.6em;
+      font-size: 1.5em;
       line-height: 1.3em;
     }
     a {
-      font-size: 3em;
+      font-size: 2.5em;
     }
     .font {
       h1 {
-        font-size: 3em;
+        font-size: 2.5em;
       }
       p {
-        font-size: 2em;
+        font-size: 1.5em;
       }
     }
   #title {
