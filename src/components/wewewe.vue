@@ -1,6 +1,8 @@
 <template>
   <div class="instagram page">
-
+<div class="size">
+  Width :{{windowWidth}} , Height: {{windowHeight}}
+</div>
     <section class="segment cover">
       <h1 id="title">
         Instagram<br /> Clone
@@ -262,6 +264,7 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 40%;
+
 }
 .breif-right {
   background-color: #eee;
@@ -278,7 +281,6 @@ a {
 
 }
 .deliverables {
-
   padding: 12vh 5% 0 5%;
 }
 .link {
@@ -293,8 +295,6 @@ a {
   margin: auto;
   min-height: 30vh;
   padding: 3vh 0;;
-
-
 }
 .colors {
   min-height: 70vh;
@@ -369,15 +369,11 @@ a {
   //min-height: 50vh;
   float: left;
   padding: 20vh 0;
-
-
 }
 .font-sample {
-
   width: 60%;
   float: left;
   padding: 20vh 5%;
-
 }
 //screen grabs
 .preview {
@@ -427,8 +423,8 @@ a {
 
   h1 {
     text-align: center;
-    font-size: 10em;
-    padding-top: 15%;
+    font-size: 5em;
+    padding: 15vh 0;
   }
 }
 .main-tool {
@@ -511,218 +507,7 @@ a {
 
 }
 //media queries
-@media only screen and (max-width: 1024px) and (orientation: portrait) {
-  .col-two-third {
-    width: 100%;
-    float: left;
-    min-height: 50vh;
-    padding: 20vh 10% 0 10%;
-  }
-  .col-one-third {
-    width: 100%;
 
-    min-height: 50vh;
-  }
-
-  p {
-    font-size: 2.3em;
-    line-height: 1.4em;
-  }
-  h1 {
-    font-size: 3.5em;
-    padding-bottom: 3%;
-  }
-  h2 {
-    font-size: 2.5em;
-    padding-bottom: 2%;
-  }
-  h3 {
-    font-size: 2.3em;
-  }
-  ul {
-
-  }
-  li {
-    font-size: 2.1em;
-    line-height: 1.3em;
-  }
-  a {
-    font-size: 3.5em;
-  }
-  .color {
-    width: 100%;
-    height: 14vh;
-    float: left;
-    text-align: center;
-    position: relative;
-  }
-  .hex-codes {
-    top:40%;
-  }
-  .c5 {
-    .hex-codes {
-      display: inline-block;
-      margin-right: 10px;
-    }
-  }
-  .previews {
-    margin-bottom: 1vh;
-    height: 50vh;
-  }
-  //tools
-
-  .bottom-section {
-    width: 100%;
-    height: 30vh;
-  }
-
-  .sub-tools, .add-ons {
-    width: 100%;
-  }
-
-}
 @media only screen and (max-width: 823px) {
-  #title {
-    font-size: 9em;
-  }
-  .col-two-third {
-    width: 100%;
-    float: left;
-    min-height: 50vh;
-    padding: 15vh 5% 0 5%;
-  }
-  .col-one-third {
-    width: 100%;
-
-    min-height: 50vh;
-  }
-  .logo {
-    background-size: 15%;
-  }
-  //breif
-  .breif-left {
-    padding: 20vh 10%;
-    background-color: #f7f7f7;
-  }
-  .deliverables {
-    padding: 12vh 5%;
-  }
-  //previews
-  .previews {
-    width: 90%;
-    height: 60vh;
-    margin-bottom: 5vh;
-  }
-  //tools
-
-  .bottom-section {
-    width: 100%;
-  }
-
-  .sub-tools, .add-ons {
-    width: 100%;
-  }
-  .palette-text {
-    padding: 5vh 0;;
-  }
-
-}
-
-@media only screen and (max-width: 700px) {
-  .palette-text {
-    text-align: left;
-    width: 90%;
-    margin: auto;
-  }
-  .color-taster {
-    width: 90%;
-    height: 100%;
-    margin: auto;
-  }
-  .hex-codes {
-    font-size: 1.5em;
-  }
-  .font-titles {
-    width: 100%;
-    float: left;
-    padding: 10vh 0 5vh 0;
-  }
-  .font-sample {
-    width: 100%;
-    float: left;
-    padding: 0 10vh 10vh 10vh;
-  }
-  .sec-font {
-    border-bottom: 2px solid black;
-  }
-
-}
-@media only screen and (max-width: 480px) {
-
-    p {
-      font-size: 1.8em;
-      line-height: 1.4em;
-    }
-    h1 {
-      font-size: 3em;
-      padding-bottom: 3%;
-    }
-    h2 {
-      font-size: 2em;
-      padding-bottom: 2%;
-    }
-    h3 {
-      font-size: 2em;
-    }
-    ul {
-
-    }
-    li {
-      font-size: 1.6em;
-      line-height: 1.3em;
-    }
-    a {
-      font-size: 3em;
-    }
-    .font {
-      h1 {
-        font-size: 3em;
-      }
-      p {
-        font-size: 2em;
-      }
-    }
-  #title {
-    font-size: 6em;
-  }
-  .hex-codes {
-    top:40%;
-    font-size: 1.3em;
-  }
-  .c5 {
-    .hex-codes {
-      display: inline-block;
-      margin-right: 10PX;
-    }
-  }
-  .color {
-    width: 100%;
-    height: 14vh;
-    float: left;
-    text-align: center;
-    position: relative;
-  }
-  //font area
-
-  .font-sample {
-    padding: 0 2vh 10vh 2vh;
-  }
-
-  //previews area
-  .previews {
-    width: 90%;
-    height: 50vh;
-    margin-bottom: 1vh;
-  }
 }
 </style>
