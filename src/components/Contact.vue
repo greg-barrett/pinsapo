@@ -31,7 +31,7 @@
     </div>
     <div class="half right">
         <div class="narrow">
-          <img src="../assets/pinsapo4.png" />
+          <img src="../assets/logo-l.png" />
         </div>
         <div class="address narrow" >
           <p>gbarrett15@gmail.com</p>

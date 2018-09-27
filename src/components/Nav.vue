@@ -151,7 +151,7 @@ button {
   background-color: rgba(256, 256, 256, 0.9);
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 568px) {
   .nav-btns {
     font-size: 1.4em;
     height: 50px;

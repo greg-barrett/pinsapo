@@ -56,8 +56,8 @@ export default {
 
 <style scoped lang="scss">
 .about-page {
-  height: 100%;
-  position: fixed;
+
+  position:fixed;
   width: 100%;
 }
 .page {
@@ -66,10 +66,8 @@ export default {
 
 .col {
   float: left;
-  height: 100%;
-  border-right: 4px solid #f2eaed;
+  height: 100vh;
   transition: width 1s;
-
 }
 
 .about {
@@ -86,6 +84,7 @@ export default {
   background-repeat: no-repeat;
   height: 100%;
 }
+
 .design {
   background-image: url(../assets/design-long.png);
   background-position: top;
@@ -99,51 +98,38 @@ export default {
   background-size: contain;
   background-repeat: no-repeat;
   height: 100%;
-}
-.focus {
-  width:85%;
 
 }
+.focus {
+  width:85vw;
+}
 .equal {
-  width: 25%;
+  width: 25vw;
 }
 .minor {
-  width: 5%;
+  width: 5vw;
 }
 .background {
   background: none;
-  position: relative;
-  overflow: hidden;
 }
 
 .aboutCol {
-
   background-color: #16235a;
+  color: #F3F3F2;
 }
 .thinkCol {
   background-color: #F3F3F2;
+  color: #16235a;
 }
 .designCol {
   background-color: #16235a;
+  color: #F3F3F2;
 }
 .buildCol {
   background-color: #F3F3F2;
+  color: #16235a;
 }
 
-h1 {
-  font-size: 7em;
-  color: white;
-  text-align: center;
-  margin: 40px 0;
-}
-p {
-  width: 80%;
-  margin: auto;
-  font-size: 2.5em;
-  line-height: 1.4em;
-  color: white;
-
-}
 //transitions for the paragraph
 .appear-enter-active {
   transition: opacity 1s ease-out 2s;
@@ -156,54 +142,63 @@ p {
   opacity:0;
 }
 
+h1 {
+  font-size: 3.5em;
+  position: relative;
+  top: 10vw;
+  left: 10vw;
+}
+p {
+  left: 10vw;
+  font-size: 1.8em;
+  line-height: 1.4em;
+  position: relative;
+  top: 12vw;
+  width: 30%;
+}
+
+
+
 //keyframes from animista
 //title
-
-
-@media only screen and (min-width: 1366px) {
+@media only screen and (max-width: 1024px) {
   p {
-    font-size: 3.5em;
-    width: 70%;
-    margin: 5% auto;
+    width: 60%;
   }
-
 }
-
-
 @media only screen and (max-width: 812px) {
-  h1 {
-    font-size: 3em;
-    margin: 20px 0;
 
-  }
-  p {
-    font-size: 1.5em;
-    width: 80%;
-  }
-}
-@media only screen and (min-width: 768px) and (orientation: portrait) {
   h1 {
-    font-size: 5em;
+    font-size: 3.5em;
+    position: relative;
+    top: 3vw;
+    left: 3vw;
   }
   p {
-    font-size: 2.4em;
+    left: 3vw;
+    font-size: 1.8em;
+    line-height: 1.4em;
+    position: relative;
+    top: 6vw;
     width: 80%;
   }
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
+
   .col {
-    width: 100%;
-    height: 25%;
+    width: 100vw;
+    height: 25vh;
     transition: height 2s;
   }
   .focus {
-    height:85%;
+    height:85vh;
+    overflow: auto;
   }
   .equal {
-    height: 25%;
+    height: 25vh;
   }
   .minor {
-    height: 5%;
+    height: 5vh;
   }
   .about {
     background-image: url(../assets/about-lat.png);
@@ -228,6 +223,34 @@ p {
     overflow: hidden;
   }
 
+  h1 {
+    font-size: 3.5em;
+    position: relative;
+    top: 8vh;
+    left: 8vw;
+  }
+  p {
+    left: 8vw;
+    font-size: 1.8em;
+    line-height: 1.4em;
+    position: relative;
+    top: 12vh;
+    width: 80%;
+  }
 }
 
+@media only screen and (max-width: 568px) {
+  h1 {
+    font-size: 2.5em;
+    top: 3vh;
+    left: 40px;
+  }
+  p {
+    left: 40px;
+    font-size: 1.5em;
+    line-height: 1.4em;
+    top: 6vh;
+    width: 80%;
+  }
+}
 </style>

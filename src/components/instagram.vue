@@ -277,7 +277,6 @@ a {
 }
 .link {
   color: white;
-
   background-color: #3897f0;
   padding: 20vh 5% 0 5%;
 }
