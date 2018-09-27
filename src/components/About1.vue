@@ -56,9 +56,9 @@ export default {
 
 <style scoped lang="scss">
 .about-page {
-
-  position:fixed;
   width: 100%;
+  height: 100%;
+
 }
 .page {
   font-family: 'Open Sans', sans-serif;
@@ -66,7 +66,8 @@ export default {
 
 .col {
   float: left;
-  height: 100vh;
+  //height: 100vh;
+  height: 100%;
   transition: width 1s;
 }
 
@@ -101,13 +102,17 @@ export default {
 
 }
 .focus {
-  width:85vw;
+  //width:85vw;
+  width:85%;
 }
 .equal {
-  width: 25vw;
+  //width: 25vw;
+  width: 25%;
+
 }
 .minor {
-  width: 5vw;
+  //width: 5vw;
+  width: 5%;
 }
 .background {
   background: none;
@@ -186,19 +191,25 @@ p {
 @media only screen and (max-width: 768px) {
 
   .col {
-    width: 100vw;
-    height: 25vh;
+    //width: 100vw;
+    //height: 25vh;
     transition: height 2s;
+    width: 100%;
+    height: 25%;
+
   }
   .focus {
-    height:85vh;
+    //height:85vh;
+    height:85%;
     overflow: auto;
   }
   .equal {
-    height: 25vh;
+    //height: 25vh;
+    height: 25%;
   }
   .minor {
-    height: 5vh;
+    //height: 5vh;
+    height: 5%;
   }
   .about {
     background-image: url(../assets/about-lat.png);
