@@ -594,7 +594,29 @@ a {
     padding: 10vh 0;
   }
 }
-
+@media only screen and (max-width: 823px) and (orientation:landscape) {
+  .tool-area {
+    width: 80vw;
+    margin: auto;
+    float: none;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .main-tool{
+    background-size: contain;
+  }
+  .s-t-2 {
+    background-size: contain;
+  }
+  .s-t-3 {
+    background-size: contain;
+  }
+  .add-on {
+    width: 33%;
+    height: 100%;
+    float: left;
+  }
+}
 @media only screen and (max-width: 700px) {
   .palette-text {
     width: 90%;

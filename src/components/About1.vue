@@ -58,7 +58,7 @@ export default {
 .about-page {
   height: 100%;
   position: fixed;
-  width: inherit;
+  width: 100%;
 }
 .page {
   font-family: 'Open Sans', sans-serif;
@@ -67,34 +67,34 @@ export default {
 .col {
   float: left;
   height: 100%;
-  border-right: 4px solid white;
+  border-right: 4px solid #f2eaed;
   transition: width 1s;
 
 }
 
 .about {
-  background-image: url(../assets/about.png);
+  background-image: url(../assets/about-long.png);
   background-position: top;
   background-size: contain;
   background-repeat: no-repeat;
   height: 100%;
 }
 .think {
-  background-image: url(../assets/think.png);
+  background-image: url(../assets/think-long.png);
   background-position: top;
   background-size: contain;
   background-repeat: no-repeat;
   height: 100%;
 }
 .design {
-  background-image: url(../assets/design.png);
+  background-image: url(../assets/design-long.png);
   background-position: top;
   background-size: contain;
   background-repeat: no-repeat;
   height: 100%;
 }
 .build {
-  background-image: url(../assets/build.png);
+  background-image: url(../assets/build-long.png);
   background-position: top;
   background-size: contain;
   background-repeat: no-repeat;
@@ -117,16 +117,17 @@ export default {
 }
 
 .aboutCol {
-  background-color: #197F31;
+
+  background-color: #16235a;
 }
 .thinkCol {
-  background-color: #31FF62;
+  background-color: #F3F3F2;
 }
 .designCol {
-  background-color: #3F7F4E;
+  background-color: #16235a;
 }
 .buildCol {
-  background-color: #27CC4E;
+  background-color: #F3F3F2;
 }
 
 h1 {
@@ -205,32 +206,21 @@ p {
     height: 5%;
   }
   .about {
-    background-image: url(../assets/about.png);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 100%;
+    background-image: url(../assets/about-lat.png);
+    background-position:center;
   }
   .think {
-    background-image: url(../assets/think.png);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 100%;
+    background-image: url(../assets/think-lat.png);
+    background-position:center;
+
   }
   .design {
-    background-image: url(../assets/design.png);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 100%;
+    background-image: url(../assets/design-lat.png);
+    background-position:center;
   }
   .build {
-    background-image: url(../assets/build.png);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 100%;
+    background-image: url(../assets/build-lat.png);
+    background-position:center;
   }
   .background {
     background: none;
