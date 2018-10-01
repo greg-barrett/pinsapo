@@ -1,9 +1,7 @@
 <template>
   <div class="landing page">
-
-        <h1 class="typing">PINSAPO</h1>
-        <p>Websites by Gregory Barrett</p>
-
+    <h1 class="typing">PINSAPO</h1>
+    <p>Websites by Gregory Barrett</p>
   </div>
 </template>
 
@@ -40,8 +38,8 @@ export default {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
 }
+
 
 h1 {
   font-size: 20em;

@@ -96,7 +96,7 @@ export default {
 }
 .about {
   top: 6px;
-  right:60px;
+  right:300px;
 }
 .features {
   top: 6px;
@@ -104,10 +104,10 @@ export default {
 }
 .contact {
   top: 6px;
-  right:300px;
+  right:60px;
 }
 .nav-arrow, .bgr {
- background-color: rgba(256, 256, 256, 0.6);
+ background-color: rgba(256, 256, 256, 0.8);
  border-radius: 100px;
 }
 .back {
@@ -147,7 +147,7 @@ button {
 
 }
 
-.nav-btns:hover, .bgr:hover, .nav-arrow:hover {
+.nav-btns:hover, .nav-arrow:hover, .bgr:hover {
   background-color: rgba(256, 256, 256, 0.9);
 }
 

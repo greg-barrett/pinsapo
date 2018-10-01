@@ -5,36 +5,3 @@ html, body, {
     font-size: 20px;
 
 }
-body:after {
-  font-size: 150%;
-  font-weight: bold;
-  position: fixed;
-  bottom: 60px;
-  width: 100%;
-  text-align: center;
-}
-@media only screen and (min-width: 1367px) {
-  body:after {
-    content: "Big screens";
-    background-color: hsla(180,60%,40%,0.7);
-  }
-}
-@media only screen and (max-width: 1366px) {
-  body:after {
-    content: "laptop to tablet";
-    background-color: hsla(90,60%,40%,0.7);
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  body:after {
-    content: "Phones less than 768px";
-    background-color: hsla(90,60%,40%,0.7);
-  }
-}
-@media only screen and (max-width: 480px) {
-  body:after {
-    content: "Phones less than 480px";
-    background-color: hsla(90,60%,40%,0.7);
-  }
-}

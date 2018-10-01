@@ -8,28 +8,28 @@
     </section>
 
     <section class="segment about">
-      <div class="col-two-third">
-        <p>Instagram is a social media platform for creating and sharing photos and videos.
+      <div class="col-two-third fader">
+        <p class="fader">Instagram is a social media platform for creating and sharing photos and videos.
         First Launched in 2010, it has grown into a titan of the social media market, supported
         by 100s of millions of users.</p>
       </div>
-      <div class="col-one-third logo">
+      <div class="col-one-third fader logo">
       </div>
       <div style="clear: left;"></div>
     </section>
 
     <section class="segment breif">
-      <div class="col-two-third breif-left">
-        <h1>Brief</h1>
-        <p>For this project I needed to make a fully functional clone of Instgram, paying careful attention
+      <div class="col-two-third breif-left fader">
+        <h1 class="fader">Brief</h1>
+        <p class="fader">For this project I needed to make a fully functional clone of Instgram, paying careful attention
         to styling and responsivie design. I completed this project as a capstone to a Ruby on Rails coding course.
       </p>
 
       </div>
       <div class="col-one-third breif-right">
-        <div class="deliverables">
-          <h2>Website Features</h2>
-          <ul>
+        <div class="deliverables fader">
+          <h2 class="fader">Website Features</h2>
+          <ul class="fader">
             <li>Secure Authentication System</li>
             <li>Image Uploader</li>
             <li>Fast Back-end Database</li>
@@ -37,8 +37,9 @@
             <li>Search</li>
           </ul>
         </div>
-        <div class="link">
-          <a href="https://insteadgram1.herokuapp.com/users/sign_in">Preview</a>
+        <div class="link fader">
+          <div id="in-link">
+          <a class="fader"  href="https://insteadgram1.herokuapp.com/users/sign_in">Preview</a></div>
         </div>
         <div style="clear: left;"></div>
       </div>
@@ -46,38 +47,24 @@
     </section>
     <section class="segment palettes">
       <div class="palette-text">
-        <h1>Palette</h1>
-        <p>Instagram has a a simple pastle palette in shades of gray. The palette also includes
+        <h1 class="fader">Palette</h1>
+        <p class="fader">Instagram has a a simple pastle palette in shades of gray. The palette also includes
         cool blues for buttons and is accented by its iconic logo color gradient.</p>
 
       </div>
       <article class="colors">
-        <div class="color-taster">
-
-          <div class="color c1">
-              <p class="hex-codes">#e8e8e8</p>
+          <div class="color-taster fader">
+            <div  v-for="color in colors" class="color" v-bind:id="color.id" v-on:mouseover="color.hovered=true" v-on:mouseleave="color.hovered=false" v-bind:key="color.id">
+              <transition-group name="zoomIn">
+                <p v-show="color.hovered" class="hex-codes" v-for="code in color.codes" v-bind:key="code">{{code}}</p>
+                </transition-group>
+            </div>
           </div>
-          <div class="color c2">
-              <p class="hex-codes">#f7f7f7</p>
-          </div>
-          <div class="color c3">
-              <p class="hex-codes">#eee</p>
-          </div>
-          <div class="color c4">
-              <p class="hex-codes">#3897f0</p>
-          </div>
-          <div class="color c5">
-              <p class="hex-codes">#1400c8</p>
-              <p class="hex-codes">#b900b4</p>
-              <p class="hex-codes">#f50000</p>
-          </div>
-
-        </div>
-      </article>
-
+        </article>
     </section>
+
     <section class="segment fonts">
-      <div class="font first-font">
+      <div class="font first-font fader">
         <div class="font-titles">
           <h1>Satisfy</h1>
           <h3>Logos</h3>
@@ -87,7 +74,7 @@
         </div>
         <div style="clear: left;"></div>
       </div>
-      <div class="font sec-font">
+      <div class="font sec-font fader">
         <div class="font-titles">
           <h1>Roboto</h1>
           <h3>Headers & Body</h3>
@@ -101,45 +88,36 @@
     </section>
 
     <section class="segment preview">
+        <h1 class="fader">View Profiles</h1>
+        <a class="fader" href="https://insteadgram1.herokuapp.com/users/sign_in"><div class="previews  previews-one fader"></div></a>
 
-        <div class="previews  previews-one"></div>
-        <div class="previews  previews-two"></div>
-        <div class="previews  previews-three"></div>
-        <div class="previews  previews-four"></div>
+        <h1 class="fader" >Explore Posts</h1>
+        <a class="fader" href="https://insteadgram1.herokuapp.com/users/sign_in"><div class="previews  previews-two fader"></div></a>
+
+        <h1 class="fader">View Posts</h1>
+        <a class="fader" href="https://insteadgram1.herokuapp.com/users/sign_in"><div class="previews  previews-three fader"></div></a>
+
+        <h1 class="fader">See Followers</h1>
+        <a class="fader" href="https://insteadgram1.herokuapp.com/users/sign_in"><div class="previews  previews-four fader"></div></a>
 
     </section>
 
     <section class="segment tool-kit">
-      <div class="tool-area title">
+      <div class="tool-area title fader">
           <h1>Tools</h1>
       </div>
-      <div class="tool-area main-tool">
+      <div class="tool-area main-tool fader"></div>
 
-      </div>
-
-        <div class="sub-tools tool-area">
-          <div class="sub-tool s-t-1">
-
-          </div>
-          <div class="sub-tool s-t-2">
-
-          </div>
-          <div class="sub-tool s-t-3">
-
-          </div>
-
+        <div class="sub-tools tool-area fader">
+          <div class="sub-tool s-t-1"></div>
+          <div class="sub-tool s-t-2"></div>
+          <div class="sub-tool s-t-3"></div>
         </div>
-        <div class="add-ons tool-area">
-          <div class="add-on a-o-1">
 
-          </div>
-          <div class="add-on a-o-2">
-
-          </div>
-          <div class="add-on a-o-3">
-
-          </div>
-
+        <div class="add-ons tool-area fader">
+          <div class="add-on a-o-1"></div>
+          <div class="add-on a-o-2"></div>
+          <div class="add-on a-o-3"></div>
         </div>
 
     </section>
@@ -148,35 +126,47 @@
 
 <script>
 import {bus} from "../main"
-
+import ScrollMagic from 'scrollmagic'
 export default {
   data() {
     return {
-      windowWidth:0,
-      windowHeight:0
-    }
-  },
-  methods: {
-    width(e) {
-      console.log(e.currentTarget.innerWidth)
-      this.windowWidth= e.currentTarget.innerWidth;
-      this.windowHeight= e.currentTarget.innerHeight;
+      colors: [
+        {id:"c1", codes:["#e8e8e8"], hovered:false },
+        {id:"c2", codes:["#f7f7f7"], hovered:false },
+        {id:"c3", codes:["#eeeeee"], hovered:false },
+        {id:"c4", codes:["#3897f0"], hovered:false },
+        {id:"c5", codes:["#1400c8", "#b900b4", "#f50000"], hovered:false }
+      ]
     }
   },
   created() {
     bus.$emit('pageChange', 4)
   },
   mounted() {
-    this.$nextTick(function () {
-      window.addEventListener('resize', this.width);
-  })
-}
-
+    var fader=document.getElementsByClassName("fader")
+  	var controller = new ScrollMagic.Controller();
+    for (var i=0; i<fader.length; i++){
+      var scene = new ScrollMagic.Scene({
+        triggerElement: fader[i]
+      })
+      .setClassToggle(fader[i], "show")
+      .offset(-100)
+      .reverse(false)
+      .addTo(controller);
+    }
+  }
 }
 </script>
 
 
 <style scoped lang="scss">
+.fader {
+  opacity: 0;
+  transition: 1s;
+}
+.show {
+  opacity: 1;
+}
 .page {
   width: 100%;
 }
@@ -232,6 +222,11 @@ li {
 a {
   font-size: 3em;
 }
+#in-link {
+  -webkit-animation: wobble-hor-bottom 3s infinite both;
+          animation: wobble-hor-bottom 3s infinite both;
+}
+
 //about page
 
 .about, .breif, .palettes, .fonts, .preview .tool-kit {
@@ -304,22 +299,26 @@ a {
   float: left;
   text-align: center;
   position: relative;
+  span {
+    display: block;
+    height: 100%;
+  }
 }
 
-.c1 {
+#c1 {
   background-color: #e8e8e8;
 }
-.c2 {
+#c2 {
   background-color: #f7f7f7;
 }
-.c3 {
+#c3 {
   background-color: #eee;
 }
-.c4{
+#c4{
   background-color: #3897f0;
 }
 
-.c5 {
+#c5 {
   background: #d6249f;
   background: linear-gradient(-135deg,#1400c8,#b900b4,#f50000);
   color: white;
@@ -330,11 +329,21 @@ a {
 .hex-codes {
   position: relative;
   top:50%;
+  letter-spacing: 1.5px;
+  opacity: 1;
 }
+.zoomIn-enter-active {
+  animation: zoomIn 1s forwards;
+}
+.zoomIn-leave-active /* .list-leave-active below version 2.1.8 */ {
+    animation: zoomOut 1s forwards;
+}
+
+
 //fonts
 
 .font {
-  width: 100vw;
+  width: 100%;
   text-align: center;
   float: left;
   h3 {
@@ -375,8 +384,11 @@ a {
 //screen grabs
 .preview {
   min-height: 100vh;
-  width: 100vw;
-
+  width: 100%;
+  text-align: center;
+  h1 {
+    padding-top: 30px;
+  }
 
 }
 
@@ -389,19 +401,21 @@ a {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+
 }
 .previews-one {
   background-image: url("../assets/profile.png");
 
+
 }
 .previews-two {
-  background-image: url("../assets/profile.png");
+  background-image: url("../assets/explore.png");
 }
 .previews-three {
-  background-image: url("../assets/profile.png");
+  background-image: url("../assets/post.png");
 }
 .previews-four {
-  background-image: url("../assets/profile.png");
+  background-image: url("../assets/following.png");
 }
 
 //toolkit
@@ -482,6 +496,75 @@ a {
   background-size: contain;
   display: inline-block;
 
+}
+//animation for link
+@-webkit-keyframes wobble-hor-bottom {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+  3.7% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+            transform: translateX(-30px) rotate(-6deg);
+  }
+  7.5% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+            transform: translateX(15px) rotate(6deg);
+  }
+  22% {
+    -webkit-transform: translateX(-15px) rotate(-3.6deg);
+            transform: translateX(-15px) rotate(-3.6deg);
+  }
+  15% {
+    -webkit-transform: translateX(9px) rotate(2.4deg);
+            transform: translateX(9px) rotate(2.4deg);
+  }
+  16.5% {
+    -webkit-transform: translateX(-6px) rotate(-1.2deg);
+            transform: translateX(-6px) rotate(-1.2deg);
+  }
+  25% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+}
+@keyframes wobble-hor-bottom {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+  7.5% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+            transform: translateX(-30px) rotate(-6deg);
+  }
+  15% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+            transform: translateX(15px) rotate(6deg);
+  }
+  22% {
+    -webkit-transform: translateX(-15px) rotate(-3.6deg);
+            transform: translateX(-15px) rotate(-3.6deg);
+  }
+  30% {
+    -webkit-transform: translateX(9px) rotate(2.4deg);
+            transform: translateX(9px) rotate(2.4deg);
+  }
+  37% {
+    -webkit-transform: translateX(-6px) rotate(-1.2deg);
+            transform: translateX(-6px) rotate(-1.2deg);
+  }
+  50% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
 }
 //media queries
 @media only screen and (max-width: 1024px) and (orientation: portrait) {

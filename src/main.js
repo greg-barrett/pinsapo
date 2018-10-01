@@ -3,11 +3,10 @@ import App from './App.vue'
 import VueResource from 'vue-resource'
 import VueRouter from 'vue-router'
 import Routes from './routes'
-import VueTypedJs from 'vue-typed-js'
 Vue.use(VueResource)
 Vue.use(VueRouter)
 Vue.config.productionTip = false
-Vue.use(VueTypedJs)
+
 
 
 const router = new VueRouter({

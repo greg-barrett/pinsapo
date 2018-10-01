@@ -17,9 +17,9 @@ export default {
     return {
       clicked:false,
       sections: [
-        { title:"Insaecular Saeculorum", ref:"col1", focus:false, equal:true, minor:false, full:false, hidden:false, insac: true },
-        { title:"Le Petit Fairzou", ref:"col2", focus:false, equal:true, minor:false, full:false, hidden:false, lpf: true },
-        { title:"Instagram", ref:"col3", focus:false, equal:true, minor:false, full:false, hidden:false, instagram: true}
+        { title:"Insaecular Saeculorum", ref:"col1", link:"/insaecuar-saeculorum", focus:false, equal:true, minor:false, full:false, hidden:false, insac: true },
+        { title:"Les-Arbres-Paresseux", ref:"col2", link:"les-arbres-paresseux", focus:false, equal:true, minor:false, full:false, hidden:false, lpf: true },
+        { title:"Instagram", ref:"col3", link:"instagram", focus:false, equal:true, minor:false, full:false, hidden:false, instagram: true}
       ],//sections
       cols:2
     }//return
@@ -48,6 +48,7 @@ export default {
           this.sections[i].focus=false;
           this.sections[i].minor=false;
           this.sections[i].full=true;
+          setTimeout(this.navigate, 2000, this.sections[i].link );
         } else {
           //if not clciked add minor class
           this.sections[i].focus=false;
@@ -58,16 +59,15 @@ export default {
         this.sections[i].equal=false
       }//for
       this.clicked=true;
-      setTimeout(this.navigate, 2000);
+      //setTimeout(this.navigate, 2000);
     },//resize
     addClass() {
       for (var i=0; i<= this.cols; i++) {
-        console.log("hey")
         this.$refs.section[i].classList.add(this.sections[i].class);
       }//for
     },
-    navigate () {
-      this.$router.push('instagram');
+    navigate (link) {
+      this.$router.push(link);
     }//addClass
   },//methods
   created() {

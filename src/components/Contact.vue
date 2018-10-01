@@ -3,7 +3,7 @@
 
     <div class="half left">
       <transition name="appear">
-        <form v-show="!submitted"action="https://formcarry.com/s/mfCF2w7y8h7" method="post" accept-charset="UTF-8">
+        <form v-show="!submitted"action="#https://formcarry.com/s/mfCF2w7y8h7a" method="post" accept-charset="UTF-8">
           <h1> Lets talk!</h1>
           <input type="hidden" name="_gotcha">
           <label>First Name</label><br />
@@ -73,7 +73,9 @@ export default {
 
 
 <style scoped lang="scss">
-
+.page {
+  height: 100%;
+}
 .half {
   height: 100%;
   float: left;
@@ -82,43 +84,56 @@ export default {
   width: 50%;
   text-align: center;
 }
+.right {
+  background-color: #F3F3F2;
 
+}
 
+.left {
+    color: #16235a;
+}
 img {
   width: 300px;
 }
 
 h1 {
-  font-size: 4.5em;;
+  font-size: 3em;;
   margin-bottom: 20px;
 
 }
 form {
-  width: 100%;
+  width: 80%;
+  margin: auto;
 }
 label {
   font-size: 1.23em;
 }
 button {
   background-color: white;
-  border: 1px solid grey;
+  border: 1px solid #16235a;;
   height: 30px;
   width: 90px;
-
+  color: #16235a;
+}
+button:hover {
+  background-color: #F3F3F2;
 }
 
 input {
   width: 50%;
   border: none;
-  height: 2.2em;;
-  border-bottom: 1px solid black;
+  height: 2.2em;
+  border-bottom: 1px solid #16235a;;
   margin-bottom: 10px;
   font-size: 1.2em;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
+
 textarea {
   width: 50%;
   height: 120px;
-  border: 1px solid black;
+  border: 1px solid #16235a;
   margin: 15px 0;
   font-size: 15px;
 }
@@ -134,40 +149,43 @@ textarea {
 }
 #github {
   width: 150px;
-  opacity: .5
+  opacity: .5;
+  transition: opactity .5s;
 }
-
+#github:hover {
+  opacity: .8;
+}
 .reply {
   text-align: left;
-  padding-top: 15%;
+  padding-top: 20px;
   width: 70%;
   margin: auto;
-  font-size: 2em;
-  line-height: 50px;
+  font-size: 1.9em;
+  line-height: 1.6em;
 
   p {
-    padding-left: 10px;
+    padding-left: 30px;
   }
 }
 h3 {
+  padding-bottom:20px;
   padding-left: 0px;
 }
 #signed {
-  text-align: center;
+  padding:30px 0 0 18vw;
   font-size: 2.1em;
-  padding-left: 0px;
 }
 //zoom out
 .appear-enter-active {
-  -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
-	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
+  -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
 
 }
 //zoom in
 .appear-leave-active {
 
-  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s both;
-	        animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s both;
+  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 
 }
 
@@ -228,30 +246,55 @@ h3 {
   }
 
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 823px) {
   .half {
     width: 100%;
     display: inline-block;
     float: none;
     font-family: 'Open Sans', sans-serif;
     padding-top: 55px;
-    width: 100%;
     text-align: center;
+    transition: height 2s ease-in;
+  }
 
+  .reply {
+    p {
+      padding-left: 0;
+    }
+    width: 60%;
+    margin-bottom: 60px;
+
+  }
+  .page {
+    height: auto;
+  }
+  .right {
+    padding-top: 0;
+  }
+  .left {
+    padding-bottom: 20px;
+  }
+  img {
+    width: 60%;
   }
 }
 @media only screen and (max-width: 480px) {
-  .half {
-    padding-top: 35px;
+  .reply {
+    width: 90%;
+    margin-bottom: 30px;
+    font-size: 1.4em;
   }
   img {
-    width: 100%;
+    width: 90%;
   }
   input, textarea {
     width: 90%;
   }
   h1 {
     font-size: 3em;
+  }
+  .right {
+    background-color: #fff;
   }
 }
 
