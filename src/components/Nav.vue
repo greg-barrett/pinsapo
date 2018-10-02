@@ -55,7 +55,6 @@ export default {
   created () {
     bus.$on("pageChange", (data)=>{
       this.page=data
-      console.log(this.page)
     });
   }
 

@@ -34,7 +34,7 @@
           <img src="../assets/logo-l.png" />
         </div>
         <div class="address narrow" >
-          <p>gbarrett15@gmail.com</p>
+          <p>enquiries.pinsapo@gmail.com</p>
           <a href="https://github.com/gregthepeg4?tab=repositories"><img id="github" src="../assets/githublogo.png" /></a>
         </div>
     </div>

@@ -615,15 +615,15 @@ a {
   .hex-codes {
     top:40%;
   }
-  .c5 {
+  .previews {
+    margin-bottom: 1vh;
+    height: 50vh;
+  }
+  #c5 {
     .hex-codes {
       display: inline-block;
       margin-right: 10px;
     }
-  }
-  .previews {
-    margin-bottom: 1vh;
-    height: 50vh;
   }
   //tools
 
@@ -674,6 +674,12 @@ a {
   .title {
     font-size: 1.5em;
     padding: 10vh 0;
+  }
+  #c5 {
+    .hex-codes {
+      display: inline-block;
+      margin-right: 10px;
+    }
   }
 }
 @media only screen and (max-width: 823px) and (orientation:landscape) {

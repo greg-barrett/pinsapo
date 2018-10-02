@@ -1,6 +1,5 @@
 <template>
   <div class="about-page page">
-
     <template v-for="section in sections">
       <div v-on:click="resize" class="col" ref="section" v-bind:class="{focus:section.focus, equal:section.equal, minor:section.minor, aboutCol:section.about, thinkCol:section.think, designCol:section.design, buildCol:section.build}">
         <div v-bind:class="{about:section.about, think:section.think, design:section.design, build:section.build, background:section.focus}">
@@ -28,6 +27,7 @@ export default {
         { title:"Design", ref:"col3", background:"url(../assets/design.png)", paragraph:"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga", focus:false, equal:true, minor:false, design:true },
         { title:"Build", ref:"col4", background:"url(../assets/build.png)", paragraph:"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga", focus:false, equal:true, minor:false, build:true }
       ]//sections
+
     }//return
   },//data
   methods: {
