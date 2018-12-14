@@ -2,7 +2,7 @@
   <div class="features page">
     <template v-for="section in sections">
       <div ref="section" v-on:mouseover="resizeHover" v-on:click="resizeClick"v-bind:class="{focus:section.focus, equal:section.equal, minor:section.minor, full:section.full, hidden:section.hidden, insac:section.insac, lpf:section.lpf, instagram:section.instagram}" class="thirds" id="left">
-        <h2>{{section.title}}</h2>
+        <h2>{{section.title_a}}</br>{{section.title_b}}</h2>
       </div>
     </template>
   </div>
@@ -17,9 +17,9 @@ export default {
     return {
       clicked:false,
       sections: [
-        { title:"Insaecular Saeculorum", ref:"col1", link:"/insaecuar-saeculorum", focus:false, equal:true, minor:false, full:false, hidden:false, insac: true },
-        { title:"Les-Arbres-Paresseux", ref:"col2", link:"les-arbres-paresseux", focus:false, equal:true, minor:false, full:false, hidden:false, lpf: true },
-        { title:"Instagram", ref:"col3", link:"instagram", focus:false, equal:true, minor:false, full:false, hidden:false, instagram: true}
+        { title_a:"Insaecular", title_b:"Saeculorum", ref:"col1", link:"/insaecuar-saeculorum", focus:false, equal:true, minor:false, full:false, hidden:false, insac: true },
+        { title_a:"Les Abres", title_b:"Paresseux", ref:"col2", link:"les-arbres-paresseux", focus:false, equal:true, minor:false, full:false, hidden:false, lpf: true },
+        { title_a:"Instagram", title_b:"Clone", ref:"col3", link:"instagram", focus:false, equal:true, minor:false, full:false, hidden:false, instagram: true}
       ],//sections
       cols:2
     }//return
@@ -101,7 +101,7 @@ export default {
   height: 100%;
   width: 100%;
   position: fixed;
-  background-color: black;
+  background-color: white;
 
 }
 
@@ -114,19 +114,27 @@ export default {
 }
 .instagram {
   background-image: linear-gradient(-135deg,#1400c8,#b900b4,#f50000);
+  font-family: 'Satisfy', cursive;
 }
 .lpf {
-  background-image: linear-gradient(to right, #111, #222);
+  background-image: linear-gradient(-135deg, #e2c0cc, #e2c0cc);
+  background-color: rgba(226,	192, 204, 1);
+  color: #5a5151;
+  font-family: 'Sacramento', cursive;
 }
 .insac {
   background-image: linear-gradient(to right, #111, #222);
 }
 
 h2 {
+  text-align: center;
+  white-space: nowrap;
+  font-size: 4.5em;
   position: absolute;
-  bottom: 5px;
-  left: 5px;
-  font-size: 2.5em;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
 }
 
 
@@ -158,11 +166,10 @@ h2 {
     white-space: nowrap;
     overflow: hidden;
   }
-  h2 {
-    font-size: 1.5em;
-  }
+
 }
-@media only screen and (max-width: 1024px) {
+
+@media only screen and (max-width: 812px)and (orientation: landscape) {
   h2 {
     font-size: 1.5em;
   }
