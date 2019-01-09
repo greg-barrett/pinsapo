@@ -145,7 +145,6 @@ h2 {
   .thirds {
     float: none;
     height: 33%;
-    color: white;
     width: 100%;
     transition: height 2s ease;
   }

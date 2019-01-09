@@ -77,7 +77,7 @@
       <div class="font sec-font fader">
         <div class="font-titles">
           <h1>Roboto</h1>
-          <h3>Headers & Body Fonts</h3>
+          <h3>Header & Body Fonts</h3>
         </div>
         <div class="font-sample">
           <p>The Abies pinsapo is an evergreen tree growing up to 30m tall, sometimes becoming irregular with age.</p>

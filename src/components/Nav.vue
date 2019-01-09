@@ -125,6 +125,9 @@ export default {
   background-size: contain;
 
 }
+.nav-btns:focus, .nav-arrow:focus, .bgr:focus {
+  outline: none;
+}
 .right {
   top:50%;
   right:10px;

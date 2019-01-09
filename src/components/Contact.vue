@@ -31,7 +31,7 @@
     </div>
     <div class="half right">
         <div class="narrow">
-          <img src="../assets/logo-l.png" />
+          <img class="logo" src="../assets/logo-l.png" />
         </div>
         <div class="address narrow" >
           <p>enquiries.pinsapo@gmail.com</p>
@@ -92,8 +92,8 @@ export default {
 .left {
     color: #16235a;
 }
-img {
-  width: 300px;
+.logo {
+  height: 100%;
 }
 
 h1 {
