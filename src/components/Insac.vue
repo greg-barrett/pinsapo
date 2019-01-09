@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <h1 id="title">Insaecular<br />Saeculorum</h1>
-    <p id="tag">Comming soon...</p>
+    <p id="tag">Coming soon...</p>
   </div>
 </template>
 

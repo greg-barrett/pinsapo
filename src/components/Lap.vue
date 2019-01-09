@@ -3,13 +3,13 @@
 
     <section class="segment cover">
       <h1 id="title">
-        Les Abres<br />Parraseux
+        Les Arbres<br />Paresseux
       </h1>
     </section>
 
     <section class="segment about">
       <div class="col-two-third fader">
-        <p class="fader">Les Abres Paraseux is a luxury holiday home rental located within the Dordogne are of France. The house has been sympathetically restored by its current owners with no expense spared.</p>
+        <p class="fader">Les Arbres Paresseux is a luxury holiday home rental located within the Dordogne area of France. The house has been sympathetically restored by its current owners with no expense spared.</p>
       </div>
       <div class="col-one-third fader logo">
       </div>
@@ -19,8 +19,8 @@
     <section class="segment breif">
       <div class="col-two-third breif-left fader">
         <h1 class="fader">Brief</h1>
-        <p class="fader">The owners of Les Abres Paraseux needed a website which would attract visitors to the property and increase the number of bookings. They
-          wanted the website to feel distinctly french to reflect the house that they had worked so hard to create.
+        <p class="fader">The owners of Les Arbres Paresseux needed a website which would attract visitors to the property and increase the number of bookings. They
+          wanted the website to feel distinctly French to reflect the house that they had worked so hard to create.
       </p>
 
       </div>
@@ -28,10 +28,10 @@
         <div class="deliverables fader">
           <h2 class="fader">Website Features</h2>
           <ul class="fader">
-            <li>Bespoke front-end design</li>
-            <li>Custom photography and copy</li>
-            <li>Client and Admin login areas</li>
-            <li>Sleek online booking system</li>
+            <li>Bespoke Front-End Design</li>
+            <li>Custom Photography and Copy</li>
+            <li>Client and Admin Login Areas</li>
+            <li>Sleek Online Booking System</li>
           </ul>
         </div>
         <div class="link fader">
@@ -45,8 +45,8 @@
     <section class="segment palettes">
       <div class="palette-text">
         <h1 class="fader">Palette</h1>
-        <p class="fader">The pallet was chosen to complement the pastel shades of the decor and invoke feelings
-           of the french countryside. Transparencies were also used for an extra touch of elegance.</p>
+        <p class="fader">The palette was chosen to complement the pastel shades of the décor and invoke feelings
+           of the French countryside. Transparencies were also used for an added touch of elegance.</p>
       </div>
       <article class="colors">
           <div class="color-taster fader">
@@ -63,7 +63,7 @@
       <div class="font first-font fader">
         <div class="font-titles">
           <h1>Sacramento</h1>
-          <h3>Titles & Headers</h3>
+          <h3>Title & Header Fonts</h3>
         </div>
         <div class="font-sample">
           <p>The Pinsapo is an evergreen tree growing up to 30m tall, sometimes becoming irregular with age.</p>
@@ -73,10 +73,10 @@
       <div class="font sec-font fader">
         <div class="font-titles">
           <h1>Cormorant</h1>
-          <h3>Body text</h3>
+          <h3>Body Font</h3>
         </div>
         <div class="font-sample">
-          <p>The leaves are 2cm long and are strongly glaucous; pale blue-green.</p>
+          <p>The Pinsapo is an evergreen tree growing up to 30m tall, sometimes becoming irregular with age.</p>
         </div>
         <div style="clear: left;"></div>
       </div>
@@ -93,7 +93,7 @@
         <h1 class="fader">The Reservation Form</h1>
         <a class="fader" href="https://lesarboles.herokuapp.com/reservers/new"><div class="previews  previews-three fader"></div></a>
 
-        <h1 class="fader">A Room Feature</h1>
+        <h1 class="fader">Room by Room Guid</h1>
         <a class="fader" href="https://lesarboles.herokuapp.com/house"><div class="previews  previews-four fader"></div></a>
 
     </section>

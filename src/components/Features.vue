@@ -18,7 +18,7 @@ export default {
       clicked:false,
       sections: [
         { title_a:"Insaecular", title_b:"Saeculorum", ref:"col1", link:"/insaecuar-saeculorum", focus:false, equal:true, minor:false, full:false, hidden:false, insac: true },
-        { title_a:"Les Abres", title_b:"Paresseux", ref:"col2", link:"les-arbres-paresseux", focus:false, equal:true, minor:false, full:false, hidden:false, lpf: true },
+        { title_a:"Les Arbres", title_b:"Paresseux", ref:"col2", link:"les-arbres-paresseux", focus:false, equal:true, minor:false, full:false, hidden:false, lpf: true },
         { title_a:"Instagram", title_b:"Clone", ref:"col3", link:"instagram", focus:false, equal:true, minor:false, full:false, hidden:false, instagram: true}
       ],//sections
       cols:2

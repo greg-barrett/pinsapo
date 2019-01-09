@@ -10,7 +10,7 @@
     <section class="segment about">
       <div class="col-two-third fader">
         <p class="fader">Instagram is a social media platform for creating and sharing photos and videos.
-        First Launched in 2010, it has grown into a titan of the social media market, supported
+        First launched in 2010, it has grown into a titan of the social media market, supported
         by 100s of millions of users.</p>
       </div>
       <div class="col-one-third fader logo">
@@ -32,8 +32,8 @@
           <ul class="fader">
             <li>Secure Authentication System</li>
             <li>Image Uploader</li>
-            <li>Fast Back-end Database</li>
-            <li>Comment, Like, Follow</li>
+            <li>Fast Back-End Database</li>
+            <li>Comment - Like - Follow</li>
             <li>Search</li>
           </ul>
         </div>
@@ -48,8 +48,8 @@
     <section class="segment palettes">
       <div class="palette-text">
         <h1 class="fader">Palette</h1>
-        <p class="fader">Instagram has a a simple pastle palette in shades of gray. The palette also includes
-        cool blues for buttons and is accented by its iconic logo color gradient.</p>
+        <p class="fader">Instagram has a simple pastel palette in shades of grey. The palette also includes
+        cool blues for buttons and is accented by its iconic logo colour gradient.</p>
 
       </div>
       <article class="colors">
@@ -67,7 +67,7 @@
       <div class="font first-font fader">
         <div class="font-titles">
           <h1>Satisfy</h1>
-          <h3>Logos</h3>
+          <h3>Logo Font</h3>
         </div>
         <div class="font-sample">
           <p>The Abies pinsapo is an evergreen tree growing up to 30m tall, sometimes becoming irregular with age.</p>
@@ -77,10 +77,10 @@
       <div class="font sec-font fader">
         <div class="font-titles">
           <h1>Roboto</h1>
-          <h3>Headers & Body</h3>
+          <h3>Headers & Body Fonts</h3>
         </div>
         <div class="font-sample">
-          <p>The leaves are 2cm long and are strongly glaucous; pale blue-green.</p>
+          <p>The Abies pinsapo is an evergreen tree growing up to 30m tall, sometimes becoming irregular with age.</p>
         </div>
         <div style="clear: left;"></div>
       </div>

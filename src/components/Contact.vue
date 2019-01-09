@@ -4,7 +4,7 @@
     <div class="half left">
       <transition name="appear">
         <form v-show="!submitted"action="#https://formcarry.com/s/mfCF2w7y8h7a" method="post" accept-charset="UTF-8">
-          <h1> Lets talk!</h1>
+          <h1>Let's talk!</h1>
           <input type="hidden" name="_gotcha">
           <label>First Name</label><br />
           <input name="FirstName" type="text" v-model="form.name" required><br />
